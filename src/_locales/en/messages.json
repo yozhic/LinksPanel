@@ -7,6 +7,10 @@
         "message": "Search following the case of the search terms",
         "description": "Tooltip explaining search filtering using follow case"
     },
+    "copycb":{
+        "message": "Copy URLs to Clipboard",
+        "description": "popup button for copying all URLs to clipboard"
+    },
     "complex":{
         "message": "Advanced",
         "description": "Settings page prompt for complex search by terms with negation with hyphen"
@@ -28,7 +32,7 @@
         "description": "Shows when the extension failed to get links from the page, possibly because the extension has just been installed and existing open pages are not ready"
     },
     "json":{
-        "message": "Save all page URLs as JSON",
+        "message": "Save URLs as JSON",
         "description": "popup button for saving all page as json"
     },
     "justScript":{
@@ -44,7 +48,7 @@
         "description": "Tooltip text on button in panel that toggles locking"
     },
     "markdown":{
-        "message": "Save all page URLs as Markdown",
+        "message": "Save URLs as Markdown",
         "description": "popup button for saving all pages to a list"
     },
     "maxlinks":{
@@ -61,7 +65,7 @@
     },
     "noLinks":{
         "message": "No Links",
-        "description": "The page doesn't have any <a> links, or the current search filter doesn't return anything"
+        "description": "The page doesn't have any \u003Ca>, links or the current search filter doesn't return anything"
     },
     "openin":{
         "message": "Open links in...",
@@ -92,11 +96,11 @@
         "description": "Settings page prompt to save"
     },
     "saveall":{
-        "message": "Save all pages to downloads folder (may take a long time)",
+        "message": "Save pages to Downloads folder\n(may take a long time)",
         "description": "popup button for saving all pages"
     },
     "saveall_tip":{
-        "message": "Save all selected pages",
+        "message": "Action for selected links",
         "description": "Tooltip for the button to save all pages"
     },
     "saved":{
@@ -104,7 +108,7 @@
         "description": "Settings page prompt save complete"
     },
     "search":{
-        "message": "Search...",
+        "message": "Filter...",
         "description": "Prompt to filter the list of links"
     },
     "searchOptions":{
@@ -136,7 +140,7 @@
         "description": "Tooltip explaining search filtering using search options (Title)"
     },
     "txt":{
-        "message": "Save all page URLs as TXT",
+        "message": "Save URLs as TXT",
         "description": "popup button for saving all pages to a txt file"
     },
     "unlock":{
