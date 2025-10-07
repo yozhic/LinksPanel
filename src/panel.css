@@ -4,7 +4,7 @@
 * Marked portions copyright their respective owners
 **/
 :root {
-    --radiusRound: 0px;
+    --radiusRound: 5px;
 
     --colorBgLightIntense: #ffffff;
     --colorFg: #333333;
@@ -14,16 +14,15 @@
     --colorBorderIntense: #b9b9b9;
     --colorBg: #f6f6f6;
     --colorBgDark: #ececec;
-
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         --colorBgLightIntense: #343434;
         --colorFg: #cdc8c0;
-        --colorHighlightBg: #0190f5;
+        --colorHighlightBg: #007bff;
         --colorHighlightFg: #f6f6f6;
-        --colorBorder: #242424;
+        --colorBorder: #575757;
         --colorBorderIntense: #161616;
         --colorBg: #2e2e2e;
         --colorBgDark: #2a2a2a;
@@ -46,20 +45,65 @@ header {
     background: var(--colorBgLightIntense);
     width: 100%;
 }
-button, input {
-    border-radius: var(--radiusRound);
+input {
+    flex-grow: 1;
+    background: linear-gradient(var(--colorBgLightIntense), var(--colorBg));
+    border-left: none;
+    border-right: none;
+    padding-left: 8px;
+}
+input:hover {
+    background: linear-gradient(var(--colorBg), var(--colorBgLightIntense));
+}
+input:focus {
+    background: var(--colorBorderIntense);
+}
+input, button {
+    border-radius: 0px;
     border: 1px solid var(--colorBorder);
     color: var(--colorFg);
-}
-button {
-    background: linear-gradient(var(--colorBgLightIntense), var(--colorBg));
 }
 button.hidden {
     display: none;
 }
-input {
-    flex-grow: 1;
-    background: var(--colorBgLightIntense);
+button:focus, input:focus {
+    outline: none;
+    outline: 2px solid var(--colorHighlightBg);
+    border-radius: var(--radiusRound);
+    z-index: 1;
+}
+#lock, #unlock, #options, #download {
+    background: linear-gradient(var(--colorBgLightIntense), var(--colorBg));
+}
+#lock:hover, #unlock:hover, #options:hover, #download:hover {
+    background: linear-gradient(var(--colorBg), var(--colorBgLightIntense));
+}
+#lock, #unlock {
+    border-top-left-radius:    var(--radiusRound);
+    border-bottom-left-radius: var(--radiusRound);
+    border-right: none;
+}
+#lock, #unlock, #options, #download {
+    width: 2.25em;
+    height: 2.25em;
+    padding: 0;
+}
+#options {
+    border-right: none;
+    border-left: none;
+}
+#download {
+    border-left: none;
+    border-top-right-radius:    var(--radiusRound);
+    border-bottom-right-radius: var(--radiusRound);
+}
+#lock svg, #unlock svg, #options svg, #download svg {
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+}
+#lock svg path, #unlock svg path, #options svg path, #download svg path {
+    fill: var(--colorFg);
 }
 
 nav {
@@ -92,10 +136,70 @@ a.selected {
     color: var(--colorHighlightFg);
 }
 
+dialog {
+    background-color: var(--colorBgLightIntense);
+    color: var(--colorFg);
+    border: 1px solid var(--colorBorder);
+    border-radius: 8px;
+}
 dialog h4 {
     margin-top: 0;
 }
-
+hr {
+    border: 0;
+    height: 1px;
+    background-color: var(--colorBorder);
+}
 #closedl {
     float: right;
+    color: var(--colorBorder);
+    background-color: var(--colorBgLightIntense);
+}
+#closedl:focus {
+    color: var(--colorHighlightBg);
+}
+#closedl:hover {
+    cursor: pointer;
+    color: var(--colorHighlightBg);
+}
+#copycb, #saveall, #txt, #markdown, #json {
+    background-color: var(--colorBgLightIntense);
+    outline: none;
+    border: none;
+    text-align: left;
+    padding: .3em 0em;
+}
+#copycb:focus, #saveall:focus, #txt:focus, #markdown:focus, #json:focus {
+    color: var(--colorHighlightBg);
+}
+#copycb:hover, #saveall:hover, #txt:hover, #markdown:hover, #json:hover {
+    color: var(--colorHighlightFg);
+    cursor: pointer;
+}
+
+/* Options Dialog */
+#openin {
+    background: var(--colorBg);
+    color: var(--colorFg);
+    padding: 3px 6px;
+    border-radius: var(--radiusRound);
+}
+#openin:focus {
+    outline: none;
+    outline: 2px solid var(--colorHighlightBg);
+    z-index: 1;
+}
+#max {
+    padding: 3px 6px;
+    border-radius: var(--radiusRound);
+}
+#save {
+    background: linear-gradient(var(--colorBgLightIntense), var(--colorBg));
+    margin-top: 1em;
+    width: 7em;
+    height: 2em;
+    border-radius: var(--radiusRound);
+}
+#save:hover {
+    background: linear-gradient(var(--colorBg), var(--colorBgLightIntense));
 }
