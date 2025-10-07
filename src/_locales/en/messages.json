@@ -1,115 +1,51 @@
 {
-    "name": {
-        "message": "Links Panel",
-        "description": "Title of extension"
-    },
-    "description": {
-        "message": "Collate all the links on the page into an easily accessible panel",
-        "description": "Description of extension"
-    },
-    "lock": {
-        "message": "🔓︎",
-        "description": "Text on button in panel that prevents changes to the list of links (i.e. currently unlocked)"
-    },
-    "unlock": {
-        "message": "🔒︎",
-        "description": "Text on button in panel that auto updates the latest set of links (i.e. currently locked)"
-    },
-    "lock_tip": {
-        "message": "Lock the panel to keep the same list of links even after you switch tabs",
-        "description": "Tooltip text on button in panel that toggles locking"
-    },
-    "search": {
-        "message": "Search...",
-        "description": "Prompt to filter the list of links"
-    },
-    "saveall_tip": {
-        "message": "Save all selected pages",
-        "description": "Tooltip for the button to save all pages"
-    },
-    "saveall": {
-        "message": "Save all pages to downloads folder (may take a long time)",
-        "description": "popup button for saving all pages"
-    },
-    "txt": {
-        "message": "Save all page URLs as TXT",
-        "description": "popup button for saving all pages to a txt file"
-    },
-    "markdown": {
-        "message": "Save all page URLs as Markdown",
-        "description": "popup button for saving all pages to a list"
-    },
-    "json": {
-        "message": "Save all page URLs as JSON",
-        "description": "popup button for saving all page as json"
-    },
-    "failed": {
-        "message": "Could not get any links from tab, you may need to reload the tab",
-        "description": "Shows when the extension failed to get links from the page, possibly because the extension has just been installed and existing open pages are not ready"
-    },
-    "noLinks": {
-        "message": "No Links",
-        "description": "The page doesn't have any <a> links, or the current search filter doesn't return anything"
-    },
-    "options":{
-        "message": "Links Panel Options",
-        "description": "Title of options page"
-    },
-    "style":{
-        "message": "What CSS properties to style panel with",
-        "description": "Settings page prompt for style options"
-    },
-    "searchOptions":{
-        "message": "What to look through when searching",
-        "description": "Settings page prompt for search options"
-    },
-    "url":{
-        "message": "URL",
-        "description": "Settings page prompt for search options (URL)"
-    },
-    "title":{
-        "message": "Title",
-        "description": "Settings page prompt for search options (Title)"
-    },
-    "text":{
-        "message": "Text",
-        "description": "Settings page prompt for search options (Text)"
-    },
     "case":{
         "message": "MaTcH CaSe",
         "description": "Settings page prompt search follow case"
-    },
-    "complex":{
-        "message": "Advanced",
-        "description": "Settings page prompt for complex search by terms with negation with hyphen"
-    },
-    "url_tip":{
-        "message": "Search in the link's URL",
-        "description": "Tooltip explaining search filtering using search options (URL)"
-    },
-    "title_tip":{
-        "message": "Search in the link's title attribute",
-        "description": "Tooltip explaining search filtering using search options (Title)"
-    },
-    "text_tip":{
-        "message": "Search in the link's visible text",
-        "description": "Tooltip explaining search filtering using search options (Text)"
     },
     "case_tip":{
         "message": "Search following the case of the search terms",
         "description": "Tooltip explaining search filtering using follow case"
     },
+    "complex":{
+        "message": "Advanced",
+        "description": "Settings page prompt for complex search by terms with negation with hyphen"
+    },
     "complex_tip":{
         "message": "Use an advanced search where each term must match, and any preceded by a hyphen (-) are excluded",
         "description": "Tooltip explaining search filtering using complex search by terms with negation with hyphen"
     },
-    "save":{
-        "message": "Save",
-        "description": "Settings page prompt to save"
+    "description":{
+        "message": "Collate all the links on the page into an easily accessible panel",
+        "description": "Description of extension"
     },
-    "saved":{
-        "message": "Saved!",
-        "description": "Settings page prompt save complete"
+    "displaySettings":{
+        "message": "How should items be displayed in the panel",
+        "description": "Settings label for the area dedicated to display settings"
+    },
+    "failed":{
+        "message": "Could not get any links from tab, you may need to reload the tab",
+        "description": "Shows when the extension failed to get links from the page, possibly because the extension has just been installed and existing open pages are not ready"
+    },
+    "json":{
+        "message": "Save all page URLs as JSON",
+        "description": "popup button for saving all page as json"
+    },
+    "justScript":{
+        "message": "Hide links that are just a script",
+        "description": "Prompt for checkbox to hide links that are just scripts"
+    },
+    "lock":{
+        "message": "🔓︎",
+        "description": "Text on button in panel that prevents changes to the list of links (i.e. currently unlocked)"
+    },
+    "lock_tip":{
+        "message": "Lock the panel to keep the same list of links even after you switch tabs",
+        "description": "Tooltip text on button in panel that toggles locking"
+    },
+    "markdown":{
+        "message": "Save all page URLs as Markdown",
+        "description": "popup button for saving all pages to a list"
     },
     "maxlinks":{
         "message": "Maximum number of links to parse",
@@ -119,40 +55,104 @@
         "message": "Increasing the number of max links could have performance dips. Recommended max: 5000",
         "description": "Warning that appears in settings if the max number of links is very high"
     },
-    "samePage":{
-        "message": "Hide links to current page",
-        "description": "Prompt for checkbox to hide links to current page"
+    "name":{
+        "message": "Links Panel",
+        "description": "Title of extension"
     },
-    "justScript":{
-        "message": "Hide links that are just a script",
-        "description": "Prompt for checkbox to hide links that are just scripts"
+    "noLinks":{
+        "message": "No Links",
+        "description": "The page doesn't have any <a> links, or the current search filter doesn't return anything"
     },
     "openin":{
         "message": "Open links in...",
         "description": "Settings option title for how to open links"
     },
-    "optNewTab":{
-        "message": "New Tab (default)",
-        "description": "Settings option to open in new tab"
-    },
     "optFollowerTab":{
         "message": "Follower Tab",
         "description": "Settings option to open in follower tab"
     },
-    "displaySettings":{
-        "message": "How should items be displayed in the panel",
-        "description": "Settings label for the area dedicated to display settings"
+    "optNewTab":{
+        "message": "New Tab (default)",
+        "description": "Settings option to open in new tab"
     },
-    "urlsOnly":{
-        "message": "Show only URLs",
-        "description": "Label for settings option to only display urls in panel"
+    "options":{
+        "message": "Links Panel Options",
+        "description": "Title of options page"
+    },
+    "removeDupes":{
+        "message": "Hide Duplicate URLs",
+        "description": "Label for settings option to hide links with duplicate URLs"
+    },
+    "samePage":{
+        "message": "Hide links to current page",
+        "description": "Prompt for checkbox to hide links to current page"
+    },
+    "save":{
+        "message": "Save",
+        "description": "Settings page prompt to save"
+    },
+    "saveall":{
+        "message": "Save all pages to downloads folder (may take a long time)",
+        "description": "popup button for saving all pages"
+    },
+    "saveall_tip":{
+        "message": "Save all selected pages",
+        "description": "Tooltip for the button to save all pages"
+    },
+    "saved":{
+        "message": "Saved!",
+        "description": "Settings page prompt save complete"
+    },
+    "search":{
+        "message": "Search...",
+        "description": "Prompt to filter the list of links"
+    },
+    "searchOptions":{
+        "message": "What to look through when searching",
+        "description": "Settings page prompt for search options"
     },
     "sorted":{
         "message": "Sort Alphabetically",
         "description": "Label for settings option to sort the items alphabetically"
     },
-    "removeDupes":{
-        "message": "Hide Duplicate URLs",
-        "description": "Label for settings option to hide links with duplicate URLs"
+    "style":{
+        "message": "What CSS properties to style panel with",
+        "description": "Settings page prompt for style options"
+    },
+    "text":{
+        "message": "Text",
+        "description": "Settings page prompt for search options (Text)"
+    },
+    "text_tip":{
+        "message": "Search in the link's visible text",
+        "description": "Tooltip explaining search filtering using search options (Text)"
+    },
+    "title":{
+        "message": "Title",
+        "description": "Settings page prompt for search options (Title)"
+    },
+    "title_tip":{
+        "message": "Search in the link's title attribute",
+        "description": "Tooltip explaining search filtering using search options (Title)"
+    },
+    "txt":{
+        "message": "Save all page URLs as TXT",
+        "description": "popup button for saving all pages to a txt file"
+    },
+    "unlock":{
+        "message": "🔒︎",
+        "description": "Text on button in panel that auto updates the latest set of links (i.e. currently locked)"
+    },
+    "url":{
+        "message": "URL",
+        "description": "Settings page prompt for search options (URL)"
+    },
+    "url_tip":{
+        "message": "Search in the link's URL",
+        "description": "Tooltip explaining search filtering using search options (URL)"
+    },
+    "urlsOnly":{
+        "message": "Show only URLs",
+        "description": "Label for settings option to only display urls in panel"
     }
 }
