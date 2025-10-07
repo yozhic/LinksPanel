@@ -173,8 +173,11 @@ hr {
     color: var(--colorHighlightBg);
 }
 #copycb:hover, #saveall:hover, #txt:hover, #markdown:hover, #json:hover {
-    color: var(--colorHighlightFg);
+    color: var(--colorHighlightBg);
     cursor: pointer;
+}
+#copycb:focus:hover, #saveall:focus:hover, #txt:focus:hover, #markdown:focus:hover, #json:focus:hover {
+    text-decoration: underline;
 }
 
 /* Options Dialog */
