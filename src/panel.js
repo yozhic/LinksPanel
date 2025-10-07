@@ -452,14 +452,25 @@ function saveFileJson(){
     chrome.downloads.download({url: blob, saveAs: true, filename: "links.json"});
 }
 
+function copyToCB(){
+    const selected = document.querySelectorAll("a.selected");
+    const alllinks = document.querySelectorAll("a");
+    const data = selected.length==0 ? Array.from(alllinks).map(x => x.href+"\n") : Array.from(selected).map(x => x.href+"\n");
+    let urls = data.toString();
+    urls = urls.replace(/^,/gm, "");
+    navigator.clipboard.writeText(urls);
+    document.getElementsByTagName("dialog")[0].close();
+}
+
+
 /**
  * Init page i18n and listeners
- */
+**/
 document.querySelector("#lock").addEventListener("click", toggleLock);
-document.querySelector("#lock").innerText = chrome.i18n.getMessage("lock");
+// document.querySelector("#lock").innerText = chrome.i18n.getMessage("lock");
 document.querySelector("#lock").title = chrome.i18n.getMessage("lock_tip");
 document.querySelector("#unlock").addEventListener("click", toggleLock);
-document.querySelector("#unlock").innerText = chrome.i18n.getMessage("unlock");
+// document.querySelector("#unlock").innerText = chrome.i18n.getMessage("unlock");
 document.querySelector("#unlock").title = chrome.i18n.getMessage("lock_tip");
 document.querySelector("input").addEventListener("input", search);
 document.querySelector("input").placeholder = chrome.i18n.getMessage("search");
@@ -472,10 +483,12 @@ document.querySelector("#download").addEventListener("click", download);
 document.querySelector("#download").title = chrome.i18n.getMessage("saveall_tip");
 document.querySelector("dialog h4").innerText = chrome.i18n.getMessage("saveall_tip");
 document.querySelector("#saveall").innerText = chrome.i18n.getMessage("saveall");
+document.querySelector("#copycb").innerText = chrome.i18n.getMessage("copycb");
 document.querySelector("#txt").innerText = chrome.i18n.getMessage("txt");
 document.querySelector("#markdown").innerText = chrome.i18n.getMessage("markdown");
 document.querySelector("#json").innerText = chrome.i18n.getMessage("json");
 document.querySelector("#saveall").addEventListener("click", startDownloadQueue);
+document.querySelector("#copycb").addEventListener("click", copyToCB);
 document.querySelector("#txt").addEventListener("click", saveFileTxt);
 document.querySelector("#markdown").addEventListener("click", saveFileMd);
 document.querySelector("#json").addEventListener("click", saveFileJson);
